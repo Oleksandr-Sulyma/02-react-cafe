@@ -1,73 +1,77 @@
-# React + TypeScript + Vite
+# ☕ React Cafe App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Інтерактивний застосунок для голосування за кафе та підрахунку статистики. Створено з використанням **React** і **TypeScript**. Проєкт уже доступний онлайн: [Відкрити на Vercel](https://02-react-cafe-ten-rust.vercel.app/)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Технології
 
-## React Compiler
+Проєкт реалізовано з використанням сучасного стеку:
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+- **React + TypeScript** – для надійної та масштабованої розробки компонентів.
+- **Vite** – як швидкий інструмент для збірки.
+- **CSS Modules** – для локалізації стилів компонентів.
+- **ESLint + Prettier** – для підтримки єдиного стилю коду.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🧩 Функціонал
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Застосунок надає таку функціональність:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Голосування за кафе (**“Good”**, **“Neutral”**, **“Bad”**).
+- Підрахунок загальної кількості голосів.
+- Розрахунок відсотка позитивних відгуків.
+- Кнопка **скидання статистики** (`Reset`).
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Компонентна структура:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- `CafeInfo` — загальна інформація про кафе.
+- `VoteOptions` — кнопки для голосування та скидання.
+- `VoteStats` — відображення статистики (загальна кількість, відсотки).
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🌐 Демо
+
+Проєкт доступний онлайн за посиланням:
+[https://02-react-cafe-ten-rust.vercel.app/](https://02-react-cafe-ten-rust.vercel.app/)
+
+---
+
+## ⚙️ Встановлення та Запуск
+
+Для запуску проєкту локально виконайте наступні кроки.
+
+1.  **Клонувати репозиторій:**
+
+    ```bash
+    git clone [https://github.com/Oleksandr-Sulyma/02-react-cafe.git](https://github.com/Oleksandr-Sulyma/02-react-cafe.git)
+    cd 02-react-cafe
+    ```
+
+2.  **Встановити залежності:**
+
+    ```bash
+    npm install
+    ```
+
+3.  **Запустити у режимі розробки:**
+
+    ```bash
+    npm run dev
+    ```
+
+4.  **Зібрати білд (production):**
+    ```bash
+    npm run build
+    ```
+
+---
+
+## 💡 Автор
+
+**Олександр Сулима**
+
+- Frontend Developer
+- GitHub репозиторій: [https://github.com/Oleksandr-Sulyma](https://github.com/Oleksandr-Sulyma)
