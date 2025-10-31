@@ -23,14 +23,7 @@ export default function App() {
   };
 
   const totalVotes = votes.good + votes.neutral + votes.bad;
-  const btnReset = (): boolean => {
-    if (totalVotes > 0) {
-      return true;
-    } else {
-      return false;
-    }
-  };
-
+ 
   const positiveRate = totalVotes
     ? Math.round((votes.good / totalVotes) * 100)
     : 0;
@@ -53,7 +46,7 @@ export default function App() {
       <VoteOptions
         onVote={handleVote}
         onReset={resetVotes}
-        canReset={btnReset}
+        canReset = {totalVotes>0}
       />
       {content}
     </div>
